@@ -2,15 +2,13 @@
 <img src="./vall-e.png" width="500px"></img>
 </p>
 
-# VALL-E
+# VALL-E for Thai
 
-An unofficial PyTorch implementation of [VALL-E](https://valle-demo.github.io/), based on the [EnCodec](https://github.com/facebookresearch/encodec) tokenizer.
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/enhuiz)
+An implementation VALL-E for Thai. This source code is unofficial based on the PyTorch implementation of [VALL-E](https://valle-demo.github.io/), based on the [EnCodec](https://github.com/facebookresearch/encodec) tokenizer.
 
 ## Get Started
 
-> A toy Google Colab example: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1wEze0kQ0gt9B3bQmmbtbSXCoCTpq5vg-?usp=sharing).
+> A toy Google Colab example: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1LNWhEyxkHotPS5H52DPm9tstXOAbTFYK?usp=sharing).
 > Please note that this example overfits a single utterance under the `data/test` and is not usable.
 > The pretrained model is yet to come. 
 
@@ -21,16 +19,16 @@ Since the trainer is based on [DeepSpeed](https://github.com/microsoft/DeepSpeed
 ### Install
 
 ```
-pip install git+https://github.com/enhuiz/vall-e
+pip install git+https://github.com/atlonxp/vall-e-for-thai
 ```
 
 Or you may clone by:
 
 ```
-git clone --recurse-submodules https://github.com/enhuiz/vall-e.git
+git clone --recurse-submodules https://github.com/atlonxp/vall-e-for-thai.git
 ```
 
-Note that the code is only tested under `Python 3.10.7`.
+Note that the code is only tested under `Python 3.10.x`.
 
 ### Train
 
@@ -88,23 +86,3 @@ python -m vall_e <text> <ref_path> <out_path> --ar-ckpt zoo/ar.pt --nar-ckpt zoo
 ## Notice
 
 - [EnCodec](https://github.com/facebookresearch/encodec) is licensed under CC-BY-NC 4.0. If you use the code to generate audio quantization or perform decoding, it is important to adhere to the terms of their license.
-
-## Citations
-
-```bibtex
-@article{wang2023neural,
-  title={Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers},
-  author={Wang, Chengyi and Chen, Sanyuan and Wu, Yu and Zhang, Ziqiang and Zhou, Long and Liu, Shujie and Chen, Zhuo and Liu, Yanqing and Wang, Huaming and Li, Jinyu and others},
-  journal={arXiv preprint arXiv:2301.02111},
-  year={2023}
-}
-```
-
-```bibtex
-@article{defossez2022highfi,
-  title={High Fidelity Neural Audio Compression},
-  author={Défossez, Alexandre and Copet, Jade and Synnaeve, Gabriel and Adi, Yossi},
-  journal={arXiv preprint arXiv:2210.13438},
-  year={2022}
-}
-```
